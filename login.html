@@ -27,7 +27,7 @@
                 password: pass
             };
 
-            fetch('queascoyosabia.onrender.com//login', {
+            fetch('queascoyosabia.onrender.com/login', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(loginData)
@@ -45,7 +45,7 @@
                 const userData = {username: user};
 
                 // Redireccionar al usuario a la página de bienvenida sin incluir el nombre de usuario en la URL
-                fetch('queascoyosabia.onrender.com/pagina-de-bienvenida', {
+                fetch('https://queascoyosabia.onrender.com/pagina-de-bienvenida', {
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify(userData)
