@@ -67,13 +67,13 @@
                 .then(response => {
                     if (response.ok) {
                         return response.text(); // obtener el HTML de la página de bienvenida
-                    } else {
-                        throw new Error('Error al cargar la página de bienvenida');
+                    } else(error) {
+                        console.log(error)
                     }
                 })
                 .then(ok => {
                     console.log("Ok:True")
-                    window.location.href = '/home'
+                    
                     // Insertar el HTML recibido en el documento actual
                     /*document.open();
                     document.write(html);
