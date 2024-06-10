@@ -37,7 +37,7 @@
 
 
 
-            fetch('https://queascoyosabia.onrender.com/registro', {
+            fetch('/registro', {
 
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
@@ -59,7 +59,7 @@
                 const userData = {username: user};
 
                 // Redireccionar al usuario a la página de bienvenida sin incluir el nombre de usuario en la URL
-                fetch('https://queascoyosabia.onrender.com/pagina-de-bienvenida', {
+                fetch('/pagina-de-bienvenida', {
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify(userData)
