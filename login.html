@@ -52,9 +52,10 @@
                 })
                 .then(response => {
                     if (response.ok) {
+                        console.log("se cargo  bien hdp")
                         return response.text(); // obtener el HTML de la página de bienvenida
                     } else {
-                        throw new Error('Error al cargar la página de bienvenida');
+                        throw new console.log('Error al cargar la página de bienvenida');
                     }
                 })
                 .then(ok => {
