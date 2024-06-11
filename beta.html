@@ -592,20 +592,21 @@
                 modified_string = filetype.replace(/\//g, ',');
                 mierda = "file," + modified_string
                 formDataa.append('audio', fileInput.files[0], String([String(recipientt), String(user), String(mierda)]))
-                tipo = "texto"
+                
                 document.getElementById("message").disabled = false
                 document.getElementById("btnEnviarMensaje").disabled = false
                 document.getElementById("fileInput").disabled = false
                 document.getElementById("uploadButton").disabled = false
                 document.getElementById("btnComenzarGrabacion").disabled = false
                 // Detener la grabación de audio
+                
 
 
                 decidir = formDataa
                 console.log(decidir)
                 console.dir(decidir)
                 typedata = { 'type': 'audio/webm' }
-                
+                tipo = "texto"
 
             } 
             
