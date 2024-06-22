@@ -28,7 +28,7 @@
                     <input type="file" id="fileInput" multiple/>
                     <button id="uploadButton">Confirmar Archivo</button>
 
-                    <button type="submit" id="btnEnviarMensaje">Enviar Mensaje</button>
+                    <button type="click" id="btnEnviarMensaje">Enviar Mensaje</button>
 
                 </form>
 
@@ -390,7 +390,7 @@
                     //console.log(numberOfPropertiess + ">" + numberOfProperties)
 
                     if (numberOfPropertiess >= numberOfProperties) {
-                        console.log("ACADA RATO")
+                        //console.log("ACADA RATO")
                         numberOfProperties = numberOfPropertiess
                         actualizarInterfaz(messages);
 
@@ -529,10 +529,12 @@
         document.getElementById('btnEnviarMensaje').addEventListener('click', function(event) {
 
             // No hay necesidad de prevenir el evento porque el botón es de tipo "submit"
-
+            console.log("Se envio un mensaje1")
             event.preventDefault();
 
-            console.log("Se envio un mensaje")
+            console.log("Se envio un mensaje2")
+
+            
 
             
 
