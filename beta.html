@@ -234,8 +234,31 @@
                     if (message.read == false) {
 
                         console.log("Sonidito ahora...")
+                        try {
+                            mostrarNotificacionReal()
+                        } catch {
+                            
+                            if (error instanceof DOMException) {
+                                
+                                console.log('Se produjo una DOMException:');
+                                console.log("sono2...?")
+                                mostrarNotificacionReal()
+
+                                
+                                
+                                // Aquí puedes realizar acciones específicas para manejar la DOMException
+                                
+                                // Por ejemplo, mostrar un mensaje de error al usuario
+                                alert('Se produjo un error de DOM. Por favor, inténtelo de nuevo más tarde.');
+                            } else {
+                                
+                                console.error('Error:', error);
+                                
+                                // Aquí manejas otros errores que no sean DOMException
+                            }
+                        }
                         
-                        mostrarNotificacionReal()
+                        
                         EditarRead(id)
                         
 
