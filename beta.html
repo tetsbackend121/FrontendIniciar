@@ -104,7 +104,7 @@
             messages.forEach(message => {
 
                 id = message._id
-                console.log("que: " + message.read)
+                
 
 
                 const messageElement = document.createElement('div');
@@ -583,9 +583,9 @@
             } 
             
             else if (tipo == "file") {
-
+                tipo = "texto"
                 
-                accion = "Cancelar"
+                //accion = "Cancelar"
                 console.log("nose que pasa")
                 formDataa = new FormData();
 
@@ -609,7 +609,7 @@
                 console.log(decidir)
                 console.dir(decidir)
                 typedata = { 'type': 'audio/webm' }
-                tipo = "texto"
+                
 
             } 
             
