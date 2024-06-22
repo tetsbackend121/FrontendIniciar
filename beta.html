@@ -151,7 +151,7 @@
 
                         typeapp = message.filetype
                         typeapp = String(typeapp)
-                        console.log("CONCHAAAAA: " + typeapp)
+                        
                         
 
                         const fileBlob = new Blob([uint8Array], { type: String(typeapp) });
@@ -387,7 +387,7 @@
                     let keyss = Object.keys(messages);
                     let numberOfPropertiess = keyss.length;
                     
-                    console.log(numberOfPropertiess + ">" + numberOfProperties)
+                    //console.log(numberOfPropertiess + ">" + numberOfProperties)
 
                     if (numberOfPropertiess >= numberOfProperties) {
                         console.log("ACADA RATO")
@@ -532,6 +532,8 @@
 
             event.preventDefault();
 
+            console.log("Se envio un mensaje")
+
             
 
             recipient = document.getElementById('recipient').value;
@@ -550,6 +552,7 @@
             typedata = ""
 
             if (tipo == "audio"){
+                console.log("Se envio un mensaje audio")
                 message = ""   
 
                 tipo = "texto"
@@ -583,6 +586,7 @@
             } 
             
             else if (tipo == "file") {
+                console.log("Se envio un mensaje file")
                 tipo = "texto"
                 
                 //accion = "Cancelar"
@@ -614,6 +618,7 @@
             } 
             
             else {
+                console.log("Se envio un mensaje escrito")
                 decidir = JSON.stringify(messageSend)
                 
                 typedata = { 'Content-Type': 'application/json' }
