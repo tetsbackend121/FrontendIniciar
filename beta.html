@@ -24,7 +24,9 @@
                     <button type="button" id="btnComenzarGrabacion">Comenzar Grabación</button>
                     <button type="button" id="btnDetenerGrabacion" disabled>Detener Grabación</button>
                     <button type="button" id="btnCancelar">Cancelar</button>
-                    <audio id="audio-player"></audio>
+                    <audio id="audio-player">
+                        <source src="https://frontendiniciar.onrender.com/audio/notification.mp3" type="audio/mp3">
+                    </audio>
                     <input type="file" id="fileInput" multiple/>
                     <button id="uploadButton">Confirmar Archivo</button>
 
@@ -65,7 +67,7 @@
 
             // Reproducir el sonido de notificación
             var audio = document.getElementById("notificationSound");
-            audio.play();
+            //audio.play();
         }
 
         function EditarRead(check) {
