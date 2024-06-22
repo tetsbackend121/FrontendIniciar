@@ -236,9 +236,9 @@
                         console.log("Sonidito ahora...")
                         try {
                             mostrarNotificacionReal()
-                        } catch {
+                        } catch (errorr) {
                             
-                            if (error instanceof DOMException) {
+                            if (errorr instanceof DOMException) {
                                 
                                 console.log('Se produjo una DOMException:');
                                 console.log("sono2...?")
@@ -252,7 +252,7 @@
                                 alert('Se produjo un error de DOM. Por favor, inténtelo de nuevo más tarde.');
                             } else {
                                 
-                                console.error('Error:', error);
+                                console.log('Error:', errorr);
                                 
                                 // Aquí manejas otros errores que no sean DOMException
                             }
