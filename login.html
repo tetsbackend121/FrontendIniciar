@@ -27,7 +27,7 @@
                 password: pass
             };
 
-            fetch('https://queascoyosabia.onrender.com/login', {
+            fetch('https://algobackend-c9ul.onrender.com/login', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(loginData)
@@ -45,7 +45,7 @@
                 const userData = {username: user};
 
                 // Redireccionar al usuario a la página de bienvenida sin incluir el nombre de usuario en la URL
-                fetch('https://queascoyosabia.onrender.com/pagina-de-bienvenida', {
+                fetch('https://algobackend-c9ul.onrender.com/pagina-de-bienvenida', {
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify(userData)
@@ -60,7 +60,7 @@
                 })
                 .then(ok => {
                     console.log("Ok:True")
-                    window.location.href = 'https://queascoyosabia.onrender.com/home'
+                    window.location.href = 'https://algobackend-c9ul.onrender.com/home'
                     // Insertar el HTML recibido en el documento actual
                     /*document.open();
                     document.write(html);
