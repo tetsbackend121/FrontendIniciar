@@ -124,7 +124,7 @@
                         const audioElement = document.createElement('audio');
                         //audioElement.src = message.buffer; // Suponiendo que el mensaje contiene la URL del archivo de audio
                         audioElement.controls = true;
-                        messageElement.textContent = `${message.sender}:`;
+                        messageElement.textContent = `Yo:`;
 
                         const uint8Array = new Uint8Array(message.datos.data);
 
@@ -149,7 +149,7 @@
                     } else if (message.tipo === 'file'){
                         console.log("dentro1")
                         
-                        messageElement.textContent = `${message.sender}:`;
+                        messageElement.textContent = `Yo:`;
 
                         const uint8Array = new Uint8Array(message.datos.data);
 
@@ -233,32 +233,9 @@
                     
                     if (message.read == false) {
 
-                        console.log("Sonidito ahora...")
-                        try {
-                            mostrarNotificacionReal()
-                        } catch (errorr) {
-                            
-                            if (errorr instanceof DOMException) {
-                                
-                                console.log('Se produjo una DOMException:');
-                                console.log("sono2...?")
-                                mostrarNotificacionReal()
-
-                                
-                                
-                                // Aquí puedes realizar acciones específicas para manejar la DOMException
-                                
-                                // Por ejemplo, mostrar un mensaje de error al usuario
-                                alert('Se produjo un error de DOM. Por favor, inténtelo de nuevo más tarde.');
-                            } else {
-                                
-                                console.log('Error:', errorr);
-                                
-                                // Aquí manejas otros errores que no sean DOMException
-                            }
-                        }
+                        console.log("Notificado sonidoo...")
                         
-                        
+                        mostrarNotificacionReal()
                         EditarRead(id)
                         
 
